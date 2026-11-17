@@ -1,0 +1,21 @@
+AJS TRADING PRO — TARGET MONITOR FIX
+
+WINDOWS 11:
+1. Stop the old app (CMD window: press Ctrl+C).
+2. Extract this ZIP into a NEW folder. Do not overwrite a running old folder.
+3. Copy .env.example to .env if .env does not exist.
+4. Keep your AJS_API_KEY private (32+ characters for a public deployment).
+5. Keep UPSTOX_ACCESS_TOKEN only in local .env or the app Settings screen.
+6. Double-click START_AJS_TRADING.bat.
+7. Open http://localhost:3000. Press Ctrl+F5 once to load the updated scripts.
+
+TARGET / SL MONITOR:
+- B1 target and stop are checked against completed 5-minute candle HIGH/LOW after confirmation.
+- A target touch is still detected even if LTP reverses before the next refresh.
+- If target and SL are both touched in one 5-minute candle, app shows REVIEW REQUIRED; OHLC cannot prove which level was first.
+- This is a spot-price monitoring simulation, not a broker-side order or guaranteed fill.
+
+SAFETY:
+- Paper trading default ON.
+- Real trading OFF; automatic broker orders OFF.
+- Verify Upstox token, instrument keys and live quotes before relying on any status.
